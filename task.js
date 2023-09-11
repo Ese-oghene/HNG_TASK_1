@@ -3,7 +3,7 @@ const app = express();
 const port = 5000;
 
 // Define an endpoint that takes two query parameters
-app.get('/api/info', (req, res) => {
+app.get('/api/', (req, res) => {
   
    const { slackName, track } = req.query;
 
