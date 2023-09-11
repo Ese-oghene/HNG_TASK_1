@@ -1,37 +1,10 @@
-// const express = require('express');
-// const app = express();
-// const port = 5000;
-
-// // Define a route with three route parameters
-// app.get('/:slack_name/:track', (req, res) => {
-//   const slack_name = req.query.slackName;
-//   const track = req.query.track;
-
-//   // Create an object using the captured parameters
-//   const userObject = {
-//     slack_name: Bernard_Ese,
-//     current_day: Monday,
-//     track : Backend,
-    
-//   };
-
-//   // Return the object as JSON
-//   res.json(userObject);
-// });
-
-// app.listen(port, () => {
-//   console.log(`Server is listening on port ${port}`);
-// });
-
-
 const express = require('express');
 const app = express();
 const port = 5000;
 
 // Define an endpoint that takes two query parameters
 app.get('/api/info', (req, res) => {
-  // const slackName = 'Ese';
-  // const {track} = req.query
+  
    const { slackName, track } = req.query;
 
   // Validate slackName and track parameters (you can add more validation as needed)
@@ -44,8 +17,8 @@ app.get('/api/info', (req, res) => {
   const currentUTCTime = new Date().toUTCString();
 
   // Construct GitHub URLs for the file being run and source code
-  const githubFileURL = 'https://github.com/your-username/your-repo/blob/main/your-file.js'; 
-  const githubSourceCodeURL = 'https://github.com/your-username/your-repo'; 
+  const githubFileURL = 'https://github.com/Ese-oghene/HNG_TASK_1/blob/main/task.js'; 
+  const githubSourceCodeURL = 'https://github.com/Ese-oghene/HNG_TASK_1'; 
 
   // Prepare the JSON response
   const responseData = {
