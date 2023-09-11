@@ -14,7 +14,7 @@ app.get('/api/', (req, res) => {
 
   // Get the current day of the week and current UTC time
   const currentDayOfWeek = new Date().toLocaleString('en-US', { weekday: 'long' });
-  const currentUTCTime = new Date().toUTCString();
+  const currentUTCTime = new Date().toISOString();
 
   // Construct GitHub URLs for the file being run and source code
   const githubFileURL = 'https://github.com/Ese-oghene/HNG_TASK_1/blob/main/task.js'; 
